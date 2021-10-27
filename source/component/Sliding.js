@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import { View, Image,StyleSheet, Dimensions, ScrollView,Text } from 'react-native'
+import color from '../assests/colour'
+
 const Width =Dimensions.get('window').width;
 const Height =Dimensions.get('window').height;
 
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
     },
     dotactive:{
         margin:3,
-        color:'black',
+        color:color.search,
     },
     dot:{
         margin:3,

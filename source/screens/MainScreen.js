@@ -1,16 +1,15 @@
 import React from 'react'
-import { View, Text,StyleSheet } from 'react-native'
 import Screen from '../component/Screen'
 import Sliding from '../component/Sliding'
+import SearchBar from '../component/SearchBar'
 const MainScreen = () => {
     return (
-        <Screen style ={styles.container}>
+        <Screen>
+            <SearchBar />
             <Sliding />
+
         </Screen>
     )
 }
-const styles = StyleSheet.create({
-    container:{
-    }
-})
+
 export default MainScreen
