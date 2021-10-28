@@ -1,12 +1,14 @@
 import React,{useState} from 'react'
-import { View, TextInput ,StyleSheet } from 'react-native'
+import { View, TextInput ,StyleSheet,SafeAreaView } from 'react-native'
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import color from '../assests/colour'
+import color from '../../assests/colour'
+import Constants from "expo-constants";
 
 const SearchBar = () => {
     const [text, onChangeText] = useState();
 
     return (
+        <SafeAreaView style={styles.screen}>
         <View style ={styles.back}>
         <View style ={styles.container}>
             <MaterialCommunityIcons name="shield-search" size={24} color="black" style ={styles.icon}/>
@@ -21,6 +23,7 @@ const SearchBar = () => {
        />
         </View>
         </View>
+      </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({
@@ -47,6 +50,9 @@ const styles = StyleSheet.create({
       icon:{
           marginTop: 5,
           marginLeft: 10,
-      }
+      },
+      screen: {
+        paddingTop: Constants.statusBarHeight,
+      },
 })
 export default SearchBar
