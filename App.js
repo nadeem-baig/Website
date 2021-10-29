@@ -1,23 +1,15 @@
 import React from 'react';
-import MainScreen from './source/screens/MainScreen'
-import Account from './source/screens/Account'
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-
-const Drawer = createDrawerNavigator();
+import AppNavigator from './source/component/Navigation/AppNavigator'
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator >
-        <Drawer.Screen name="MainScreen" component={MainScreen} 
-        options={{
-          headerShown:false,
-        }}
-        />
-        <Drawer.Screen name="Account" component={Account} />
-      </Drawer.Navigator>
+      <AppNavigator />
     </NavigationContainer>
+
   );
 }
 
