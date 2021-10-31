@@ -6,7 +6,6 @@ import {
     Image
 } from "react-native";
 
-
 const Category = ({name,imageUri}) => {
 return (
             <View style={{ height: 130, width: 130, marginLeft: 10, borderWidth: 0.5, borderColor: '#dddddd',elevation:3,shadowColor:'gray',shadowOffset:{width:0,height:10},shadowOpacity:1,shadowRadius:10 }}>

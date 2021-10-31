@@ -1,18 +1,12 @@
 import React,{useState} from 'react'
 import { View, Image,StyleSheet, Dimensions, ScrollView,Text } from 'react-native'
-import color from '../../assests/colour'
+import {image } from '../../assests/icons'
 
 const Width =Dimensions.get('window').width;
 const Height =Dimensions.get('window').height;
 
-const images =[
-    require('../../assests/images/1.jpg'),
-    require('../../assests/images/2.jpg'),
-    require('../../assests/images/3.jpg'),
-    require('../../assests/images/4.jpg'),
-]
-
 const Sliding = () => {
+    const images = Object.values(image.sliding);
     const [imgActive,setimagActive] =useState(0)
 
     onchange=(nativeEvent)=>{
