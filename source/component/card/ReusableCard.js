@@ -1,8 +1,8 @@
 import React from 'react'
-import {View,StyleSheet,Dimensions,Text,ScrollView } from 'react-native'
+import {View,StyleSheet,Dimensions,Text,ScrollView,TouchableOpacity } from 'react-native'
 import Category from './Category'
 
-const ReusableCard = ({type,Seemore,text,space,height}) => {
+const ReusableCard = ({type,Seemore,text,space,height,navigation}) => {
     const images = Object.entries(type);
     return (
         <View style ={styles.container,[{height:space}]}>
@@ -13,16 +13,16 @@ const ReusableCard = ({type,Seemore,text,space,height}) => {
                                 {text}
                             </Text>
                     {
-                    Seemore && <Text style={{ fontSize: 15, fontWeight: '400', paddingHorizontal: 20,textAlign: 'right' }}>
-                        See More
-                    </Text>
+                    Seemore &&         <TouchableOpacity        onPress={()=>navigation.navigate("SeemoreMainDepartments")}      >
+                    <Text style={{ fontSize: 15, fontWeight: '400', paddingHorizontal: 20,textAlign: 'right' }}>
+                  See More
+              </Text>      
+              </TouchableOpacity>
                     }
+                  
 
                         <View style={{ height: 140, marginTop: 10 }}>
-                            <ScrollView
-                                horizontal={true}
-                                showsHorizontalScrollIndicator={false}
-                            >
+                            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
                                                    {
              images.map((source,index) => 
              <Category key={index} name={source[0]} imageUri={source[1]}/>

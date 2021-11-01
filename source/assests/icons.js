@@ -4,6 +4,10 @@ export default {
   
 
 export const image = {
+  Headers:{
+    '0':'Categories You can choose', 
+    '1':'Departments', 
+  },
   sliding:{
     '0': require('./images/1.jpg'),
     '1': require('./images/2.jpg'),
