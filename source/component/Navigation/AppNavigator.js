@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator();
 
 const AppNavigator = ()=>{
-    SeemoreStack =()=>
+    const child =()=>
     <Stack.Navigator>
     <Stack.Screen name="MainScreen" component={MainScreen} options ={{headerShown:false}} />
     <Stack.Screen name="SeemoreMainDepartments" component={SeemoreMainDepartments} />
@@ -21,7 +21,7 @@ const AppNavigator = ()=>{
 return(
     <>
     <Tab.Navigator>
-    <Tab.Screen name="MainScreen"    children={SeemoreStack} 
+    <Tab.Screen name="Home"    children={child} 
     options={{
         headerShown:false,
         tabBarIcon: ({color,size})=>
