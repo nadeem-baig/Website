@@ -7,7 +7,7 @@ export const image = {
   Headers:{
     '0':'Categories You can choose', 
     '1':'Departments', 
-    '2':'Explore deals offers updates for you ...'
+    '2':'Explore Deals Offers For You  Upto 100% Off    ......'
   },
   sliding:{
     '0': require('./images/1.jpg'),

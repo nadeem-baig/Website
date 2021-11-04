@@ -1,10 +1,11 @@
 import React from 'react'
-import {ScrollView,View,St } from 'react-native'
+import {ScrollView } from 'react-native'
 import {image } from '../assests/icons'
 import Sliding from '../component/mainscreen/Sliding'
 import SearchBar from '../component/mainscreen/SearchBar'
 import ReusableCard from '../component/card/ReusableCard'
-import Testfile from '../component/card/Testfile'
+import Card from '../component/card/Card'
+
 const MainScreen = ({navigation}) => {
 
     return (
@@ -13,8 +14,7 @@ const MainScreen = ({navigation}) => {
         <Sliding />
         < ReusableCard type={image.category}  text ={image.Headers[0].toString()} space={180} height={180}/>
         < ReusableCard type={image.department} Seemore={true}  text ={image.Headers[1].toString()} height={200} navigation={navigation}/>
-        < ReusableCard type={image.offerscard}  text ={image.Headers[2].toString()} space={400} height={400} cardWidth={300} cardHeight={300} font={40} weight={'900'} />
-
+        < Card type={image.offerscard}  text ={image.Headers[2].toString()}  cardWidth={300} cardHeight={400} font={40} weight={'900'} />
         </ScrollView>
     )
 }

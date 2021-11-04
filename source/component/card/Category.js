@@ -1,9 +1,5 @@
 import React  from "react";
-import {
-    View,
-    Text,
-    Image
-} from "react-native";
+import {   View, Text, Image} from "react-native";
 
 const Category = ({name,imageUri,cardWidth=130,cardHeight=130,weight='100',font=16}) => {
 return (
