@@ -12,9 +12,9 @@ const MainScreen = ({navigation}) => {
         <ScrollView  scrollEventThrottle={16} showsVerticalScrollIndicator={false}>
         <SearchBar />
         <Sliding />
-        < ReusableCard type={image.category}  text ={image.Headers[0].toString()} space={180} height={180}/>
-        < ReusableCard type={image.department} Seemore={true}  text ={image.Headers[1].toString()} height={200} navigation={navigation}/>
-        < Card type={image.offerscard}  text ={image.Headers[2].toString()}  cardWidth={300} cardHeight={400} font={40} weight={'900'} />
+        < ReusableCard type={image.category}  text ={image.Headers[0]} space={180} height={180}/>
+        < ReusableCard type={image.department} Seemore={true}  text ={image.Headers[1]} height={200} navigation={navigation}/>
+        < Card type={image.offerscard}  text ={image.Headers[2]}  cardWidth={300} cardHeight={400} font={40} weight={'900'} />
         </ScrollView>
     )
 }
