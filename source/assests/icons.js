@@ -8,12 +8,10 @@ export const image = {
     '0':'Categories You can choose', 
     '1':'Departments', 
     '2':'Explore Deals Offers For You  Upto 100% Off    ......',
-    '3':'Spacialists', 
-    '4':'General Phycian', 
+    '3':'Search by health care concerns..', 
+    '4':'Search by Speciality ...', 
     '5':'Skin Related', 
     '6':'ENT Spacialists', 
-
-
   },
   sliding:{
     '0': require('./images/1.jpg'),

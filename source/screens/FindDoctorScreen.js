@@ -2,11 +2,11 @@ import React from 'react'
 import SearchBar from '../component/mainscreen/SearchBar'
 import Body from '../component/findDoctorScreen/firstRow'
 import Screen from '../component/Screen'
-const FindDoctorScreen = () => {
+const FindDoctorScreen = ({navigation}) => {
     return (
         <Screen >
             <SearchBar />
-            <Body />
+            <Body navigation={navigation} />
         </Screen>
     )
 }
