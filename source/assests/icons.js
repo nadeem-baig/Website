@@ -7,7 +7,13 @@ export const image = {
   Headers:{
     '0':'Categories You can choose', 
     '1':'Departments', 
-    '2':'Explore Deals Offers For You  Upto 100% Off    ......'
+    '2':'Explore Deals Offers For You  Upto 100% Off    ......',
+    '3':'Spacialists', 
+    '4':'General Phycian', 
+    '5':'Skin Related', 
+    '6':'ENT Spacialists', 
+
+
   },
   sliding:{
     '0': require('./images/1.jpg'),
@@ -44,18 +50,18 @@ export const image = {
     'brain': require('./images/icon/stomach_pain.png'),
     'cancer': require('./images/icon/medicine.png'),
     'card': require('./images/icon/card.png'),
-    '1': require('./images/icon/cough.png'),
-    '2': require('./images/icon/ear.png'),
-    '3': require('./images/icon/hair_fall.png'),
-    '4': require('./images/icon/stomach_pain.png'),
-    '5': require('./images/icon/medicine.png'),
-    '6': require('./images/icon/card.png'),
-    '7': require('./images/icon/cough.png'),
-    '8': require('./images/icon/ear.png'),
-    '9': require('./images/icon/hair_fall.png'),
-    '10': require('./images/icon/stomach_pain.png'),
-    '11': require('./images/icon/medicine.png'),
-    '12': require('./images/icon/card.png'),
+    'heart': require('./images/icon/heart.png'),
+    'hepatology': require('./images/icon/hepatology.png'),
+    'neuron': require('./images/icon/neuron.png'),
+    'eyecheck': require('./images/icon/eyecheck.png'),
+    'child': require('./images/icon/child.png'),
+    'nataural': require('./images/icon/0M.png'),
+    'p': require('./images/icon/6v.png'),
+    'health': require('./images/icon/ic_heart_active.png'),
+    'lab': require('./images/icon/ic_lab_test_active.png'),
+    'pathology': require('./images/icon/ic_pathology.png'),
+    'medicine': require('./images/icon/ic_pathology.png'),
+    'pills': require('./images/icon/pills.png'),
     
   }
 

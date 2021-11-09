@@ -2,7 +2,7 @@ import React from 'react'
 import {View,StyleSheet,Text,ScrollView,TouchableOpacity } from 'react-native'
 import Category from './Category'
 
-const ReusableCard = ({type,Seemore,text,space,height,navigation,cardWidth,cardHeight,weight,font}) => {
+const ReusableCard = ({type,Seemore=false,text,space,height,navigation,cardWidth,cardHeight,weight,font,resizeMode}) => {
     const images = Object.entries(type);
     return (
         <View style ={styles.container,[{height:space}]}>
@@ -26,7 +26,7 @@ const ReusableCard = ({type,Seemore,text,space,height,navigation,cardWidth,cardH
                             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
              {
              images.map((source,index) => 
-             <Category key={index} name={source[0]} imageUri={source[1]} cardHeight={cardHeight} cardWidth={cardWidth} font={font} weight={weight}/>
+             <Category key={index} name={source[0]} imageUri={source[1]} cardHeight={cardHeight} cardWidth={cardWidth} font={font} weight={weight} resizeMode={resizeMode}/>
 
             )}
 
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         width:'100%',
         flexDirection:"row",
         flexWrap:"wrap",      
-        justifyContent:"space-around" 
+        justifyContent:"space-around",
     }
 })
 export default ReusableCard

@@ -5,6 +5,7 @@ import {MaterialCommunityIcons} from '@expo/vector-icons'
 import Account from '../../screens/Account'
 import MainScreen from '../../screens/MainScreen'
 import SeemoreMainDepartments from '../../screens/SeemoreMainDepartments'
+import FindDoctorScreen from '../../screens/FindDoctorScreen'
 
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator();
@@ -21,6 +22,14 @@ const AppNavigator = ()=>{
 return(
     <>
     <Tab.Navigator>
+
+    <Tab.Screen name="Find Doctor" component={FindDoctorScreen} 
+    options={{
+        headerShown:false,
+        tabBarIcon: ({color,size})=>
+        <MaterialCommunityIcons name="hospital-building" size={size}  color={color}/>
+    }}/>
+    
     <Tab.Screen name="Home"    children={child} 
     options={{
         headerShown:false,
@@ -28,6 +37,9 @@ return(
         <MaterialCommunityIcons name="home" size={size}  color={color} />
     }}
     />
+
+
+
     <Tab.Screen name="Account" component={Account} 
         options={{
             tabBarIcon: ({color,size})=>

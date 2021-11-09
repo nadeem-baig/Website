@@ -11,7 +11,7 @@ const SearchBar = () => {
         <SafeAreaView style={styles.screen}>
         <View style ={styles.back}>
         <View style ={styles.container}>
-            <MaterialCommunityIcons name="shield-search" size={24} color="black" style ={styles.icon}/>
+            <MaterialCommunityIcons name="shield-search" size={24} color="tomato" style ={styles.icon}/>
         <TextInput
         style={styles.input}
         onChangeText={onChangeText}
@@ -28,7 +28,9 @@ const SearchBar = () => {
 }
 const styles = StyleSheet.create({
     back:{
-    backgroundColor:color.search,
+    // backgroundColor:color.search,
+    marginLeft:10,
+    marginRight:10,
     },
     container:{
         backgroundColor:color.white,
