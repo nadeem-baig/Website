@@ -2,11 +2,12 @@ import React from 'react'
 import SearchBar from '../component/mainscreen/SearchBar'
 import Body from '../component/findDoctorScreen/firstRow'
 import Screen from '../component/Screen'
+import {image } from '../assests/icons'
 const FindDoctorScreen = ({navigation}) => {
     return (
         <Screen >
             <SearchBar />
-            <Body navigation={navigation} />
+            <Body navigation={navigation} images={image.SeemoreMainDepartments}/>
         </Screen>
     )
 }

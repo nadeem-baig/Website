@@ -3,6 +3,7 @@ import { ScrollView,View,StyleSheet,Text,TouchableOpacity } from 'react-native'
 import { image } from '../../assests/icons'
 import ReusableCard from '../card/ReusableCard'
 import Category from '../card/Category'
+import colour from '../../assests/colour'
 const firstRow = ({navigation}) => {
     const images = Object.entries(image.SeemoreMainDepartments);
 
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
         fontWeight:"700" 
     },
     text:{
-        backgroundColor:"rgb(220,219,218)",
+        backgroundColor:colour.backgroundColor,
         height:20,
         width: "70%",
         marginBottom:100,

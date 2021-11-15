@@ -9,20 +9,20 @@ const ReusableCard = ({type,Seemore=false,text,space,height,navigation,cardWidth
         <ScrollView  scrollEventThrottle={16}>
             
                     <View style={{ flex: 1,width: '100%',height:height}}>
-          {  text &&  <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
+          {  text &&  <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20,marginTop:15 }}>
                                 {text}
                             </Text>
           }
                     {
                     Seemore &&         <TouchableOpacity        onPress={()=>navigation.navigate("SeemoreMainDepartments")}      >
-                    <Text style={{ fontSize: 15, fontWeight: '400', paddingHorizontal: 20,textAlign: 'right' }}>
+                    <Text style={{ fontSize: 15, fontWeight: '400', paddingHorizontal: 20,textAlign: 'right',fontWeight: "bold" }}>
                   See More
               </Text>      
               </TouchableOpacity>
                     }
                   
 
-                        <View style={{ height:600,paddingTop:3, marginTop: 10}}>
+                        <View style={{ height:700}}>
                             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}  >
              {
              images.map((source,index) => 

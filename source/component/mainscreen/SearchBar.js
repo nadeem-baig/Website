@@ -1,12 +1,10 @@
 import React,{useState} from 'react'
-import { View, TextInput ,StyleSheet,SafeAreaView,Image } from 'react-native'
+import { View, TextInput ,StyleSheet,Image } from 'react-native'
 import color from '../../assests/colour'
-import Constants from "expo-constants";
 const SearchBar = () => {
-
-    const [text, onChangeText] = useState();
+  const [text, onChangeText] = useState();
     return (
-        <SafeAreaView style={styles.screen}>
+        <>
         <View style ={styles.back}>
         <View style ={styles.container}>
         <Image source = {require('../../assests/images/icon/mission.png')} style ={styles.icon}/>
@@ -21,7 +19,8 @@ const SearchBar = () => {
        />
         </View>
         </View>
-      </SafeAreaView>
+
+      </>
     )
 }
 const styles = StyleSheet.create({
@@ -51,9 +50,6 @@ const styles = StyleSheet.create({
           height:20,
           width:20,
           marginLeft: 10,
-      },
-      screen: {
-        paddingTop: Constants.statusBarHeight,
       },
 })
 export default SearchBar
