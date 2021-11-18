@@ -7,6 +7,7 @@ import MainScreen from '../../screens/MainScreen'
 import SeemoreMainDepartments from '../../screens/SeemoreMainDepartments'
 import FindDoctorScreen from '../../screens/FindDoctorScreen'
 import autoSearch from '../mainscreen/autoSearch'
+import SeedetailsScreen from '../findDoctorScreen/SeedetailsScreen';
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator();
 
@@ -15,12 +16,19 @@ const AppNavigator = ()=>{
     <Stack.Navigator>
     <Stack.Screen name="MainScreen" component={MainScreen} options ={{headerShown:false}} />
     <Stack.Screen name="SeemoreMainDepartments" component={SeemoreMainDepartments} />
+
     </Stack.Navigator>
     
     const FindDoctorchild =()=>
     <Stack.Navigator>
     <Stack.Screen name="Find Doctor" component={FindDoctorScreen} options ={{headerShown:false}} />
     <Stack.Screen name="SeemoreMainDepartments" component={SeemoreMainDepartments} />
+    </Stack.Navigator>
+
+    const search =()=>
+    <Stack.Navigator>
+    <Stack.Screen name="Search Medicines" component={autoSearch} options ={{headerShown:false}} />
+    <Stack.Screen name="SeedetailsScreen" component={SeedetailsScreen}  options = {({route})=>({title:route.params.data.manufacturer})} />
     </Stack.Navigator>
 
 
@@ -35,7 +43,7 @@ return(
     }}
     />
     
-    <Tab.Screen name="SearchBar"    component={autoSearch} 
+    <Tab.Screen name="SearchBar"    children={search} 
     options={{
         headerShown:false,
         tabBarIcon: ({color,size})=>

@@ -3,7 +3,7 @@ import { View, TextInput ,StyleSheet,Image, FlatList, Text,TouchableOpacity } fr
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import color from '../../assests/colour'
 import Screen from '../Screen'
-const autoSearch = () => {
+const autoSearch = ({navigation}) => {
   const [search, setsearch] = useState('');
   const [filterData, setfilterData] = useState([]);
   const [masterData, setmasterData] = useState([]);
@@ -17,13 +17,8 @@ const autoSearch = () => {
 
 
 
-  const FetchData = () => {
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    };
-    
-     fetch("https://nadeem-baig.github.io/Website/source/assests/api/medicines.json", requestOptions)
+  const FetchData = () => {    
+     fetch("https://nadeem-baig.github.io/Website/source/assests/api/medicines.json")
       .then(response => response.json())
     .then((responseJson) => {
       setfilterData(responseJson)
@@ -37,11 +32,11 @@ const autoSearch = () => {
   const ItemView =({ item}) => {
     return (
       <TouchableOpacity
-      onPress={()=>{console.log(item.id);
-      }}>
+      onPress={()=>navigation.navigate("SeedetailsScreen",{data:masterData[item.id -1 ]})}>
        <Text style={styles.itemStyle}>
-        {item.id}{' .'}{item.name.toUpperCase()}
+       {item.name}
       </Text>
+      
     </TouchableOpacity>
 
     )
@@ -50,7 +45,7 @@ const autoSearch = () => {
   const ItemSeparatorView =() => {
     return (
       <View 
-      style={{height:0.5,width:'100%', backgroundColor:'blue'}}
+      style={{height:0.5,width:'100%', backgroundColor:color.bluegradiant}}
       />
     )
   }
