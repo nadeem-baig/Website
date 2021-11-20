@@ -2,6 +2,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
+import colour from '../../assests/colour';
 import Account from '../../screens/Account'
 import MainScreen from '../../screens/MainScreen'
 import SeemoreMainDepartments from '../../screens/SeemoreMainDepartments'
@@ -28,7 +29,8 @@ const AppNavigator = ()=>{
     const search =()=>
     <Stack.Navigator>
     <Stack.Screen name="Search Medicines" component={autoSearch} options ={{headerShown:false}} />
-    <Stack.Screen name="SeedetailsScreen" component={SeedetailsScreen}  options = {({route})=>({title:route.params.data.manufacturer})} />
+    <Stack.Screen name="SeedetailsScreen" component={SeedetailsScreen}  options = {({route})=>({title:route.params.data.manufacturer,
+    headerStyle: {backgroundColor: colour.productBackground}, headerTintColor: '#fff',headerTitleStyle: {fontWeight: 'bold'}})} />
     </Stack.Navigator>
 
 

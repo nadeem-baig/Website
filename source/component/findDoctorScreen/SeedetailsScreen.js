@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
         fontSize:24,
         fontWeight:"bold",
         fontWeight:"700",
-        color:"red",
+        color:colour.red,
         marginLeft:10,
     },
     manufacturer:{
         fontSize:20,
         fontWeight:"bold",
         fontWeight:"700",
-        color:"tomato",
+        color:colour.tomato,
         marginLeft:10
 
     },
@@ -33,7 +33,12 @@ const styles = StyleSheet.create({
         fontSize:16,
         fontWeight:"900",
         fontWeight:"700",
-        margin:10
+        margin:10,
+        color:colour.white,
+
+    },
+    container:{
+        backgroundColor:colour.productBackground
     }
 })
 export default SeedetailsScreen
