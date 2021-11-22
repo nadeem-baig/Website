@@ -16,7 +16,11 @@ export const image = {
     '8':'CHOOSE FROM TOP SPECIALITIES', 
     '9':'Dermatology', 
     '10':'Ear-Nose-Throat(ENT) Specialist', 
-    '11':'Orthopedic'
+    '11':'Orthopedic',
+    '12':'Curated health checkups and screening tests',
+    '12.1':'Free home sample pickup and reports from certified labs',
+    '13':'Lab Tests with e-report delivered in 4 hours',
+    '14':'Other popular tests with sane day report',
   },
   sliding:{
     '0': require('./images/1.jpg'),
@@ -40,11 +44,11 @@ export const image = {
     'Surgeries': require('./images/icon/heart.jpg'),
   },
   offerscard:{
-    'heart': require('./images/1.jpg'),
-    'lung': require('./images/2.jpg'),
-    'kidney': require('./images/3.jpg'),
-    'brain': require('./images/4.jpg'),
-    'cancer': require('./images/1.jpg'),
+    '20 % off on all Medicines \n Order Now': require('./images/icon/20%off.png'),
+    'Get your Diabites report now \n  Hurry up ': require('./images/icon/diabites.jpg'),
+    '1 in 4 Adults are prone to Strock \n Stay Active to reduce the Chances': require('./images/icon/heartstrock.jpg'),
+    'Up To 10% on Your Bookings \n Book at your Convinience': require('./images/icon/offercoopen.jpg'),
+    '50% to 80% off on online Lab Tests': require('./images/icon/offonlabtest.jpg'),
   },
   SeemoreMainDepartments:{
     'Pimples & Ache '   : require('./images/icon/pimples.jpg'),
@@ -119,5 +123,146 @@ export const image = {
     'Acne Scars': require('./images/icon/Acne.jpg'),
     'Dandruff': require('./images/icon/Dandruff.jpg'),
   },
+  pinkCard:{
+    'Tests for Skin issues \n Starting from $150': require('./images/icon/skintest.jpg'),
+    'Test for Bone & \nJoint issues \nStarting from $147': require('./images/icon/testforbones.jpg'),
+    'Test for Feavers \nStarting from $200': require('./images/icon/feaverTest.jpg'),
+    'Diabetes tests \nStarting from $150': require('./images/icon/diabitestest.jpg'),
+    'Cancer Marker \nCheckup \nStarting from $2150': require('./images/icon/cancerMarker.jpg'),
+    'Cardic Health \nCheckup \nStarting from $500': require('./images/icon/health.jpg')
+  },
+  labtestin4hrr1:{
 
-};
+  '0':{
+   image:{  0:require('./images/icon/Livertest.jpg')  },
+   data:{
+    heading:'Liver Function Test',
+    subheading:'Also known as Lipid profile Test',
+    price:'$560'
+   }
+  },
+
+    '1':{
+      image:{       '0': require('./images/icon/ironDeficienct.jpg'),
+    },
+      data:{
+      heading:'iron Deficienct Test',
+      subheading:'Also known as iron Deficienct \nBlood',
+      price:'$450'
+   }
+  },
+
+
+  '2':{
+    image:{  0:require('./images/icon/Thyroidtest.jpg')  },
+    data:{
+    heading:'Thyroid profile Total',
+    subheading:'Also known as T3 T4 TSH',
+    price:'$400'
+    }
+  },
+
+},
+labtestin4hrr2:{
+
+  '0':{
+    image:{       '0': require('./images/icon/lipidprofiletest.jpg'),
+  },
+    data:{
+    heading:'Lipid profile Test',
+    subheading:'Also known as Lipid profile Blood',
+    price:'$434'
+    }
+  },
+
+    '1':{
+      image:{       '0': require('./images/icon/HbA1c.jpg'),
+    },
+      data:{
+      heading:'HbA1c Test',
+      subheading:'Also known as Gycosylated \nHamoglobin',
+      price:'$270'
+   }
+  },
+
+
+  '2':{
+    image:{  0:require('./images/icon/Thyroidtest.jpg')  },
+    data:{
+    heading:'Rental Function Profile',
+    subheading:'Also known as Rental Function \nProfile',
+    price:'$800'
+    }
+  },
+},
+
+
+
+otherpopulartest1:{
+
+  '0':{
+    image:{       '0': require('./images/icon/Glucose.jpg'),
+  },
+    data:{
+    heading:'Glucose Post prandial',
+    subheading:'Also known as Glucose Post \nprandial Blood',
+    price:'$150'
+    }
+  },
+
+    '1':{
+      image:{       '0': require('./images/icon/HbA1c.jpg'),
+    },
+      data:{
+      heading:'Glucose Fasting Test',
+      subheading:'Also known as Glucose Fasting \nBlood',
+      price:'$150'
+   }
+  },
+
+
+  '2':{
+    image:{  0:require('./images/icon/lipidprofiletest.jpg')  },
+    data:{
+    heading:'Beta HGC Test',
+    subheading:'Also known as Beta HGC \nAutomated Blood',
+    price:'$294'
+    }
+  },
+},
+otherpopulartest2:{
+
+  '0':{
+    image:{       '0': require('./images/icon/Vitamineb12.jpg'),
+  },
+    data:{
+    heading:'Serum B12 Test',
+    subheading:'Also known as Vitamin B12 \nconventional',
+    price:'$490'
+    }
+  },
+
+    '1':{
+      image:{       '0': require('./images/icon/ironDeficienct.jpg'),
+    },
+      data:{
+      heading:'Complete Blood Count',
+      subheading:'Also known as CBC Test',
+      price:'$300'
+   }
+  },
+
+
+  '2':{
+    image:{  0:require('./images/icon/Vitaminebd3.jpg')  },
+    data:{
+    heading:'Vitamine D3 Test',
+    subheading:'Also known as Vitamine D Profile \nBlood',
+    price:'$1000'
+    }
+  },
+}
+
+}
+
+

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { View,Image, Text,StyleSheet,Dimensions, Alert, Modal, Pressable,ScrollView,FlatList,TouchableOpacity} from 'react-native'
+import { View,Image, Text,StyleSheet,Dimensions, Modal, Pressable,FlatList,TouchableOpacity} from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import color from '../../assests/colour'
 
@@ -57,9 +57,9 @@ const SeemoreCard = ({image,text,limit=Object.entries(image).length,Seemore=fals
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible);
         }}
+        
       >
         <View style={styles.centeredView}>
           <Pressable onPress={() => setModalVisible(!modalVisible)}  >
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     },
     centeredView: {
         flex:1,
-        marginTop:'50%',
+        marginTop:'40%',
         borderRadius:30,
         backgroundColor:color.white
       },

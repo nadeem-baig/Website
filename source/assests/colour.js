@@ -8,7 +8,7 @@ export default {
     tomato:"tomato",
     red:"red",
     white:"white",
-    productBackground:"#5b5d61"
-
+    productBackground:"#5b5d61",
+    pink:"#ffe4ed",
   };
   
