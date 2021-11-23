@@ -10,15 +10,15 @@ const firstRow = ({navigation}) => {
     return (
         <>
         <ScrollView showsVerticalScrollIndicator={false}>
-         < ReusableCard type={image.SeemoreMainDepartments}  text ={image.Headers[3]} height={200} resizeMode="contain"/>
+         < ReusableCard type={image.SeemoreMainDepartments}  text ={image.Headers[3]} height={250} space={250}resizeMode="contain"/>
              <Text style={styles.card}>{image.Headers[4]}</Text>
          <View style ={styles.container}>
          {
              images.map((source,index) => 
-             <Category key={index} name={source[0]} imageUri={source[1]}  resizeMode="contain"  cardWidth={90} cardHeight={100} />
+             <Category key={index} name={source[0]} imageUri={source[1]}  resizeMode="contain"  cardWidth={100} cardHeight={130} />
             )}
             </View>
-            <TouchableOpacity onPress={()=>navigation.navigate("SeemoreMainDepartments")}>
+            <TouchableOpacity onPress={()=>navigation.navigate("SeemoreMainDepartments")} style={{marginBottom:50}}>
             <View style={styles.text}><Text>More Details ....</Text></View>
             </TouchableOpacity >
         </ScrollView>
@@ -39,11 +39,13 @@ const styles = StyleSheet.create({
     },
     text:{
         backgroundColor:colour.backgroundColor,
-        height:20,
+        height:30,
         width: "70%",
         marginBottom:100,
         alignItems: "center",
-        marginLeft:"15%"
+        marginLeft:"15%",
+        borderRadius:20,
+        padding:5
     }
 })
 export default firstRow

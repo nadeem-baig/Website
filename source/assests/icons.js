@@ -15,6 +15,15 @@ export const Navbar={
   'Customer Care': require('./images/icon/customer_service.png'),
 }
 
+export const NavbarFooter ={
+  'Read More About Health': require('./images/icon/Readmore.jpg'),
+  'Help Center': require('./images/icon/ic_consult_paid_home_empty.png'),
+  'Settings': require('./images/icon/settings.png'),
+  'Like us': require('./images/icon/like.png'),
+  'Are You a Doctor ?': require('./images/icon/diagnosis.png'),
+  'Logout': require('./images/icon/logout.png'),
+
+}
 export const image = {
   Headers:{
     '0':'Our Offerings', 

@@ -2,10 +2,12 @@ import React from 'react'
 import { View, Text,StyleSheet,Image,Button,ScrollView } from 'react-native'
 import Screen from '../component/Screen'
 import color from '../assests/colour'
-import { Navbar } from '../assests/icons'
+import { Navbar,NavbarFooter } from '../assests/icons'
 import NavigationSideiconCard from '../component/card/NavigationSideiconCard'
 const Account = () => {
   const images = Object.entries(Navbar);
+  const images2 = Object.entries(NavbarFooter);
+
     return (
       <>
       <ScrollView>
@@ -30,9 +32,17 @@ const Account = () => {
               <Image source={require('../assests/images/icon/ic_no_doctors.png')} style={styles.image}/>
             </View>
         </View>
-        <View style={{flex:1,}}>
+        <View style={{flex:1,marginTop:50}}>
               {
              images.map((source,index) => 
+             <NavigationSideiconCard type={source[0]} images={source[1]} key={index}/>
+
+            )}
+
+        </View>
+        <View style={{flex:1,marginTop:60}}>
+              {
+             images2.map((source,index) => 
              <NavigationSideiconCard type={source[0]} images={source[1]} key={index}/>
 
             )}
