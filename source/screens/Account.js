@@ -1,57 +1,61 @@
 import React from 'react'
-import { View, Text,StyleSheet,FlatList,TouchableOpacity,Image } from 'react-native'
-import color from '../assests/colour';
-import {image} from '../assests/icons'
+import { View, Text,StyleSheet,Image,Button,ScrollView } from 'react-native'
+import Screen from '../component/Screen'
+import color from '../assests/colour'
+import { Navbar } from '../assests/icons'
+import NavigationSideiconCard from '../component/card/NavigationSideiconCard'
 const Account = () => {
-    const images = Object.entries(image.Speciality);    
-  const ItemSeparatorView =() => {
+  const images = Object.entries(Navbar);
     return (
-      <View 
-      style={{height:0.5,width:'100%', backgroundColor:color.bluegradiant}}
-      />
-    )
-  }
+      <>
+      <ScrollView>
+      <Screen>
+        <View style ={styles.container}>
+            <View >
+          <Text style={[styles.Text,{marginTop:20,fontWeight:"bold",fontWeight:"700"}]}>Hello,</Text>
+          <Text style={[styles.Text,{marginTop:15}]}>MR.APPGOO EE</Text>
+          <Text style={[styles.Text,{marginTop:5}]}>Your ID:- 1234567890</Text>
+          <Text style={[styles.Text,{marginTop:5}]}>Email ID:- Google@Yahoo.com</Text>
+          <View style={{width:70, borderWidth:1.5, borderColor: color.white,borderRadius:10,overflow:"hidden",marginLeft:20,marginTop:20}}>
+          <Button
+              onPress={()=>console.log("hii")}
+              title="Edit"
+              color={color.loginBackground}
+              accessibilityLabel="Learn more about this purple button"
+            />
+          </View>
 
-  const ItemView =({ item}) => {
-    return (
-      <TouchableOpacity style ={styles.container}
-    //   onPress={()=>navigation.navigate("SeedetailsScreen",{data:masterData[item.id -1 ]})}
-      >
-          <Image source={item[1]} style={styles.image}/>
-       <Text style={styles.itemStyle}>
-       {item[0]}
-      </Text>    
-    </TouchableOpacity>
-
-    )
-  }
-
-    return (
-        <View >
-        <FlatList 
-        data={images}
-        renderItem={ItemView}
-        ItemSeparatorComponent={ItemSeparatorView}
-      />
+            </View>
+            <View style={{width:"45%", alignItems:'center',justifyContent:'center',}}>
+              <Image source={require('../assests/images/icon/ic_no_doctors.png')} style={styles.image}/>
+            </View>
         </View>
+        <View style={{flex:1,}}>
+              {
+             images.map((source,index) => 
+             <NavigationSideiconCard type={source[0]} images={source[1]} key={index}/>
+
+            )}
+
+        </View>
+      </Screen>
+      </ScrollView>
+      </>
     )
 }
 const styles = StyleSheet.create({
     container:{
-        flexDirection:"row",
-        alignItems:"center"
+    backgroundColor:color.loginBackground,
+    height:200,
+    flexDirection:"row",
     },
-    itemStyle:{
-        fontWeight:"bold",
-        fontSize:20
+    Text:{
+    color:color.white,
+    marginLeft:20,
+    marginTop:5,
+    fontWeight:"600"
     },
-    image:{
-    borderRadius:50,
-    height:50,
-    width:50,
-    marginLeft:30,
-    marginRight:20
-    },
+    
 
 })
 export default Account

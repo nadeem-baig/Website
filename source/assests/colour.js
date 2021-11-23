@@ -10,5 +10,6 @@ export default {
     white:"white",
     productBackground:"#5b5d61",
     pink:"#ffe4ed",
+    loginBackground:"#2d3977"
   };
   

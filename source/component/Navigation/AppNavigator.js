@@ -37,6 +37,13 @@ const AppNavigator = ()=>{
 return(
     <>
     <Tab.Navigator>
+    <Tab.Screen name="Account" component={Account} 
+        options={{
+            headerShown:false,
+            tabBarIcon: ({color,size})=>
+            <MaterialCommunityIcons name="plus-circle" size={size}  color={color}/>
+        }}/>
+        
     <Tab.Screen name="Home"    children={homechild} 
     options={{
         headerShown:false,
@@ -60,11 +67,7 @@ return(
         <MaterialCommunityIcons name="hospital-building" size={size}  color={color}/>
     }}/>
 
-    <Tab.Screen name="Account" component={Account} 
-        options={{
-            tabBarIcon: ({color,size})=>
-            <MaterialCommunityIcons name="plus-circle" size={size}  color={color}/>
-        }}/>
+
     </Tab.Navigator>
 
         </>

@@ -3,6 +3,18 @@ export default {
   };
   
 
+export const Navbar={
+  'Appointments': require('./images/icon/date.png'),
+  'Test Bookings': require('./images/icon/AR.png'),
+  'Orders': require('./images/icon/medicines_icon.png'),
+  'Consultation': require('./images/icon/chat.png'),
+  'My Doctors': require('./images/icon/ic_physician_blue.png'),
+  'Medical Records': require('./images/icon/medicalrecord.jpg'),
+  'Remainder': require('./images/icon/Remainders.png'),
+  'Paymenths & Cash': require('./images/icon/ic_generic_medicine_coins.png'),
+  'Customer Care': require('./images/icon/customer_service.png'),
+}
+
 export const image = {
   Headers:{
     '0':'Our Offerings', 
