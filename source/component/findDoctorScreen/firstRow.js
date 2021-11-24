@@ -5,22 +5,14 @@ import ReusableCard from '../card/ReusableCard'
 import Category from '../card/Category'
 import colour from '../../assests/colour'
 const firstRow = ({navigation}) => {
-    const images = Object.entries(image.SeemoreMainDepartments);
+    const images = Object.entries(image.Surgeries);
 
     return (
         <>
         <ScrollView showsVerticalScrollIndicator={false}>
-         < ReusableCard type={image.SeemoreMainDepartments}  text ={image.Headers[3]} height={250} space={250}resizeMode="contain"/>
-             <Text style={styles.card}>{image.Headers[4]}</Text>
-         <View style ={styles.container}>
-         {
-             images.map((source,index) => 
-             <Category key={index} name={source[0]} imageUri={source[1]}  resizeMode="contain"  cardWidth={100} cardHeight={130} />
-            )}
-            </View>
-            <TouchableOpacity onPress={()=>navigation.navigate("SeemoreMainDepartments")} style={{marginBottom:50}}>
-            <View style={styles.text}><Text>More Details ....</Text></View>
-            </TouchableOpacity >
+             <Text style={[styles.card,{fontSize:18,fontWeight:'100'}]}>{image.Headers[15.1]}</Text>
+         < ReusableCard type={image.Surgeries}  text ={image.Headers[15]} height={250} space={250}resizeMode="contain"/>
+          
         </ScrollView>
         </>
     )
@@ -33,7 +25,7 @@ const styles = StyleSheet.create({
         justifyContent:"space-around" ,
     },
     card:{
-        margin:10,
+        marginLeft:20,
         fontSize:24, 
         fontWeight:"700" 
     },

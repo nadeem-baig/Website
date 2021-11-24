@@ -1,7 +1,4 @@
-export default {
-    white: "#fff",
-  };
-  
+
 
 export const Navbar={
   'Appointments': require('./images/icon/date.png'),
@@ -42,6 +39,8 @@ export const image = {
     '12.1':'Free home sample pickup and reports from certified labs',
     '13':'Lab Tests with e-report delivered in 4 hours',
     '14':'Other popular tests with sane day report',
+    '15':'Conditions that can be treated through Surgeries',
+    '15.1':'Find top surgeons near you for your Surgericial Procedure '
   },
   sliding:{
     '0': require('./images/1.jpg'),
@@ -282,6 +281,18 @@ otherpopulartest2:{
     price:'$1000'
     }
   },
+},
+
+Surgeries:{
+  'Piles / Hem orrhoids':require('./images/icon/piles.jpg'),
+  'Hernia':require('./images/icon/hernia.jpg'),
+  'Appendicitis':require('./images/icon/Appendicites.jpg'),
+  'Anal / Fissure':require('./images/icon/Analpain.jpg'),
+  'Varicose Vein':require('./images/icon/varicosevein.jpg'),
+  'Kideny Stone':require('./images/icon/KeydenyStone.jpg'),
+  'Gall Stone':require('./images/icon/gallstones.jpg'),
+  'Circumcision':require('./images/icon/circumcision.jpg'),
+
 }
 
 }

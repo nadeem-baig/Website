@@ -7,7 +7,7 @@ import Account from '../../screens/Account'
 import MainScreen from '../../screens/MainScreen'
 import SeemoreMainDepartments from '../../screens/SeemoreMainDepartments'
 import FindDoctorScreen from '../../screens/FindDoctorScreen'
-import autoSearch from '../mainscreen/autoSearch'
+import SearchBar from '../mainscreen/SearchBar';
 import SeedetailsScreen from '../findDoctorScreen/SeedetailsScreen';
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator();
@@ -28,7 +28,7 @@ const AppNavigator = ()=>{
 
     const search =()=>
     <Stack.Navigator>
-    <Stack.Screen name="Search Medicines" component={autoSearch} options ={{headerShown:false}} />
+    <Stack.Screen name="Search Medicines" component={SearchBar} options ={{headerShown:false}} />
     <Stack.Screen name="SeedetailsScreen" component={SeedetailsScreen}  options = {({route})=>({title:route.params.data.manufacturer,
     headerStyle: {backgroundColor: colour.productBackground}, headerTintColor: '#fff',headerTitleStyle: {fontWeight: 'bold'}})} />
     </Stack.Navigator>
