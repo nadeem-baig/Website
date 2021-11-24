@@ -1,11 +1,9 @@
 import React from 'react'
-import { ScrollView,View,StyleSheet,Text,TouchableOpacity } from 'react-native'
+import { ScrollView,StyleSheet,Text } from 'react-native'
 import { image } from '../../assests/icons'
 import ReusableCard from '../card/ReusableCard'
-import Category from '../card/Category'
 import colour from '../../assests/colour'
-const firstRow = ({navigation}) => {
-    const images = Object.entries(image.Surgeries);
+const firstRow = () => {
 
     return (
         <>

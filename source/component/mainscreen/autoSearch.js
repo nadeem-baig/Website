@@ -3,21 +3,21 @@ import { View, TextInput ,StyleSheet,Image, FlatList, Text,TouchableOpacity,Acti
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import color from '../../assests/colour'
 import Screen from '../Screen'
-const autoSearch = ({navigation}) => {
+const autoSearch = ({navigation,Link}) => {
   const [search, setsearch] = useState('');
   const [filterData, setfilterData] = useState([]);
   const [masterData, setmasterData] = useState([]);
   const [Loding, setLoging] = useState(true);
-
+  
   useEffect(() => {
     FetchData()
   }, [])
-
-
-
+  
+  
+  
   const FetchData = () => {    
-     fetch("https://nadeem-baig.github.io/Website/source/assests/api/medicines.json")
-      .then(response => response.json())
+    fetch(Link)
+    .then(response => response.json())
     .then((responseJson) => {
       setfilterData(responseJson)
       setmasterData(responseJson)      
@@ -28,6 +28,7 @@ const autoSearch = ({navigation}) => {
   }
 
   const ItemView =({ item}) => {
+
     return (
       <TouchableOpacity
       onPress={()=>navigation.navigate("SeedetailsScreen",{data:masterData[item.id -1 ]})}>

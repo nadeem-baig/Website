@@ -1,4 +1,7 @@
-
+export const SearchLinks={
+  'medicines':'https://nadeem-baig.github.io/Website/source/assests/api/medicines.json',
+  'diseases':'https://nadeem-baig.github.io/Website/source/assests/api/diseases.json'
+}
 
 export const Navbar={
   'Appointments': require('./images/icon/date.png'),
@@ -64,10 +67,10 @@ export const image = {
     'Surgeries': require('./images/icon/heart.jpg'),
   },
   offerscard:{
-    '20 % off on all Medicines \n Order Now': require('./images/icon/20%off.png'),
-    'Get your Diabites report now \n  Hurry up ': require('./images/icon/diabites.jpg'),
-    '1 in 4 Adults are prone to Strock \n Stay Active to reduce the Chances': require('./images/icon/heartstrock.jpg'),
-    'Up To 10% on Your Bookings \n Book at your Convinience': require('./images/icon/offercoopen.jpg'),
+    '20% off on all Medicines \nOrder Now': require('./images/icon/20off.png'),
+    'Get your Diabites report now \nHurry up ': require('./images/icon/diabites.jpg'),
+    '1 in 4 Adults are prone to Strock \nStay Active to reduce the Chances': require('./images/icon/heartstrock.jpg'),
+    'Up To 10% on Your Bookings \nBook at your Convinience': require('./images/icon/offercoopen.jpg'),
     '50% to 80% off on online Lab Tests': require('./images/icon/offonlabtest.jpg'),
   },
   SeemoreMainDepartments:{

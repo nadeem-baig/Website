@@ -24,6 +24,8 @@ const AppNavigator = ()=>{
     <Stack.Navigator>
     <Stack.Screen name="Find Doctor" component={FindDoctorScreen} options ={{headerShown:false}} />
     <Stack.Screen name="SeemoreMainDepartments" component={SeemoreMainDepartments} />
+    <Stack.Screen name="SeedetailsScreen" component={SeedetailsScreen}  options = {({route})=>({title:route.params.data.manufacturer,
+    headerStyle: {backgroundColor: colour.productBackground}, headerTintColor: '#fff',headerTitleStyle: {fontWeight: 'bold'}})} />
     </Stack.Navigator>
 
     const search =()=>
