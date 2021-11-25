@@ -1,21 +1,23 @@
 import React from 'react'
 import { View,ScrollView } from 'react-native'
-import Body from '../component/findDoctorScreen/firstRow'
 import Screen from '../component/Screen'
-import {image,SearchLinks } from '../assests/icons'
-import AutoSearch from '../component/mainscreen/AutoSearch'
+import {doctors } from '../assests/icons'
+import CardForDoctors from '../component/card/CardForDoctors'
 const FindDoctorScreen = ({navigation}) => {
+    const images = Object.entries(doctors);
+
     return (
+        <Screen>
         <ScrollView >
+            {
+                           images.map((source,index) => 
+                           <CardForDoctors key={index} imageuri={source}/>
 
-        <AutoSearch  navigation={navigation} Link={SearchLinks.diseases}/>
-        <Screen >
-            <Body navigation={navigation} images={image.SeemoreMainDepartments}/>
-        </Screen>
-        <View>
-        </View>
-
+                             )
+                }
         </ScrollView>
+        </Screen>
+
     )
 }
 

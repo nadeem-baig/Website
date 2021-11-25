@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StyleSheet,Image,ScrollView } from 'react-native'
+import { View, Text,StyleSheet,ScrollView } from 'react-native'
 import {image} from '../../assests/icons'
 import color  from '../../assests/colour'
 import Category from '../card/Category'

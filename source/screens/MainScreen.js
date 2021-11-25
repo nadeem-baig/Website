@@ -6,6 +6,8 @@ import ReusableCard from '../component/card/ReusableCard'
 import Card from '../component/card/Card'
 import Screen from '../component/Screen'
 import PinkCard from '../component/mainscreen/PinkCard'
+import Body from '../component/findDoctorScreen/firstRow'
+
 const MainScreen = ({navigation}) => {
     return (
         <Screen >
@@ -15,6 +17,8 @@ const MainScreen = ({navigation}) => {
         < ReusableCard type={image.department} Seemore={true}  text ={image.Headers[1]} space={250} height={240} navigation={navigation}  />
         < Card type={image.offerscard}  text ={image.Headers[2]}  cardWidth={300} cardHeight={400} font={20} weight={'900'} />
         <PinkCard />
+        <Body navigation={navigation} images={image.SeemoreMainDepartments}/>
+
         </ScrollView>
         </Screen>
     )
